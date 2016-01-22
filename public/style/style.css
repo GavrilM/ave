@@ -1,0 +1,1005 @@
+body{
+  font-family: 'Oxygen', 'Alegreya Sans', sans-serif;
+  width:100vw;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'Quicksand', 'Josefin Sans', 'Raleway', 'sans-serif';
+  font-size: 4em;
+  width: 70vw;
+  text-align: center;
+}
+
+h3 {
+  line-height: 1.5em;
+  font-size: 1.5em;
+  max-width:90vw;
+}
+h6{
+  color:white;
+  font-size: 1.5em;
+  padding: 6px;
+}
+
+#main-nav {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  z-index: 2000;
+  position: fixed;
+  transition: margin-left 300ms ease;
+  margin-left: -150vw;
+  width: 100vw;
+}
+
+#main-nav ul {
+  height: 77vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  background: white;
+}
+
+#main-nav ul li {
+  padding: 5.28vh 0vw;
+  text-align: center;
+  width: 100vw;
+  background-color: lightblue;
+  transition: opacity 300ms ease-in;
+  border-left: 5px solid red;
+}
+
+#main-nav ul li:hover {
+  opacity: .65;
+}
+
+#main-nav a{
+  text-decoration:none;
+  color:black;
+}
+
+.hide-nav {}
+
+#toggle, #toggle2 {
+  display: none;
+}
+
+#toggle:checked ~ #main-nav {
+  margin-left: -00vw;
+}
+
+#registertoggle{
+  display:block;
+  position:fixed;
+  right:0;
+  z-index:2000;
+  width: auto;
+  height:auto;
+  background-color:white;
+  font-size: 12vmin;
+}
+
+
+#register{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  z-index: 1000;
+  position: fixed;
+  transition: margin-left 300ms ease;
+  margin-left: 150vw;
+  width: 100vw;
+  overflow: hidden;
+  background-color: grey;
+}
+#register input[type="text"], #register input[type="number"], #register select{
+  display:block;
+  border: 3px solid grey;
+  outline:0;
+  color:black;
+  font-size: 6.5vmin;
+  min-height: 50px;
+  width:70vw;
+  border-radius: 7px;
+  transition: border 600ms ease-in-out;
+}
+#register input[type="text"]:focus, #register input[type="number"]:focus{
+  border: 3px solid orange;
+}
+#register .section-container, #register .slider-container {
+  height: 100vh;
+}
+#register .slider-item{
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#register-init h3{
+  text-align:center;
+  width: 60vw;
+}
+#register-dining input, #register-drinking input{
+  display:none;
+}
+.register-dining-choice, .register-drinking-choice{
+  width: 60vw;
+  display:flex;
+  height:28vh;
+  border: 2px solid grey;
+}
+#choice-1:checked ~ #dining-choice1,
+#choice-2:checked ~ #dining-choice2,
+#choice-3:checked ~ #dining-choice3,
+#choice-4:checked ~ #drinking-choice1,
+#choice-5:checked ~ #drinking-choice2,
+#choice-6:checked ~ #drinking-choice3
+{
+  border: 2px solid orange;
+}
+
+#toggle2:checked ~ #register {
+  margin-left: -00vw;
+}
+#register #partners {
+  
+}
+#register #partners label{
+  display: block;
+  width: 80vw;
+  font-size: 1.5em;
+}
+
+/*-----------------------------------*/
+
+
+/*-----------------------------------*/
+
+
+/*main*/
+
+.jumbo-container,
+.section-container {
+  height: 105vh;
+  
+  transform: translateZ(0);
+}
+
+.jumbo-container {
+  background-color: black;
+  font-family: 'Poiret One', 'Quicksand', sans-serif;
+}
+
+.section-container {
+  z-index: 10;
+  position: relative;
+  background-color: white;
+}
+.jumbo-container .slidenext{
+  position: absolute;
+}
+.slidenext{
+  color:red;
+  font-size:2em;
+  text-decoration:none;
+  position:relative;
+  z-index: 100;
+  width: 100vw;
+  height: 15vh;
+  bottom:0;
+  text-align:center;
+}
+#venue .slidenext{
+  bottom:10vh;
+  left:85vw;
+}
+#jumbo-text {
+  margin-left: 20vw;
+  top: 20vh;
+  z-index: 5;
+  color: white;
+  position: fixed;
+}
+
+#jumbo-text #title-jumbo {
+  font-size: 6em;
+}
+
+#intro-jumbo {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2em;
+}
+
+#jumbo-bg {
+  background-image: url("http://vertigo.la/wp-content/uploads/2013/07/Vertigo_events_venue_banquet_hall_kitchen12000_engagement_party-750x420.jpg");
+  opacity: .5;
+  background-size: cover;
+  z-index: -1;
+  position: fixed;
+}
+
+#about-init,
+#about-loc,
+#about-accom,
+#personalize .slider-item,
+#services .slider-item,
+#dining .slider-item{
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  padding: 0vmax;
+  overflow: hidden;
+}
+#personalize .slider-item{
+  background:black;
+  color:white;
+}
+#services .slider-item,
+#dining .slider-item
+{
+  background:grey;
+  color:white;
+}
+.bg-cover {
+  position: absolute;
+  z-index:-1;
+  width: 100vw;
+  height: 105vh;
+  margin-left: -15vw;
+  top: -0vh;
+  
+  background-size: cover;
+  opacity: .35;
+  overflow:hiddden;
+  padding:0;
+}
+#about .bg-cover {
+  margin-left:0;
+  background-image: url(http://vertigo.la/wp-content/uploads/2014/08/H11847.jpg);
+  opacity: .25;
+}
+#diningintro .bg-cover {
+  margin-left:-15vw;
+  background-image: url(http://cdn.morguefile.com/imageData/public/files/m/MaxStraeten/04/l/1428570359bhnp1.jpg);
+}
+#diningbuffet .bg-cover {
+  
+  background-image: url(http://vertigo.la/wp-content/uploads/2014/05/vertigo_buffet1600.jpg);
+}
+#diningfamily .bg-cover {
+  background-image: url(http://cdn.morguefile.com/imageData/public/files/m/MGDboston/08/l/1407770351r6dra.jpg);
+}
+
+#diningplated .bg-cover {
+  background-image: url(https://freerangestock.com/sample/43715/photo.jpg);
+}
+#diningcocktail .bg-cover {
+ 
+  background-image: url(https://freerangestock.com/sample/4522/lamb-chops.jpg);
+}
+#diningdrinks .bg-cover{
+  
+  background-image: url(http://cdn.morguefile.com/imageData/public/files/m/mimiliz2/01/l/14223846667qhpt.jpg);
+}
+
+#pers-intro .bg-cover{
+  
+  background-image: url(http://vertigo.la/wp-content/uploads/2015/05/VTG_black-banquet_74.jpg);
+}
+#pers-light .bg-cover{
+  
+  background-image: url(http://cdn.morguefile.com/imageData/public/files/s/Seemann/05/l/1430617863edy67.jpg);
+}
+#pers-seating .bg-cover{
+  
+  background-image: url(http://vertigo.la/wp-content/uploads/2015/05/VTG_black-banquet_124-web2.jpg);
+}
+#pers-decor .bg-cover{
+  
+  background-image: url(https://freerangestock.com/sample/41058/restaurant-fine-dining-table-.jpg);
+}
+#pers-furn .bg-cover{
+  
+  background-image: url(http://vertigo.la/wp-content/uploads/2015/10/VTG_white-ballroom_115-1440x722.jpg);
+}
+#pers-print .bg-cover{
+  
+  background-image: url(http://cdn.morguefile.com/imageData/public/files/a/andyk/04/l/1367203151i2loz.jpg);
+}  
+#amintro .bg-cover{
+  
+  background-image: url(http://i.dailymail.co.uk/i/pix/2013/01/18/article-2264515-17043CDD000005DC-673_640x416.jpg);
+}  
+#ament .bg-cover{
+  
+  background-image: url(http://cdn.morguefile.com/imageData/public/files/m/mantasmagorical/preview/fldr_2008_11_28/file0002076407015.jpg);
+}  
+#amdisplay .bg-cover{
+  
+  background-image: url(http://cdn.morguefile.com/imageData/public/files/t/taliesin/preview/fldr_2005_10_28/file0001491373094.jpg);
+}  
+#ampics .bg-cover{
+  
+  background-image: url(http://cdn.morguefile.com/imageData/public/files/g/GaborfromHungary/11/l/14173517662y52m.jpg);
+} 
+#aminsure .bg-cover{
+  
+  background-image: url(http://cdn.morguefile.com/imageData/public/files/s/svklimkin/11/l/1448030664q5ine.jpg);
+}  
+
+
+#about-init h1 {
+  width: 110vw;
+  text-align: center;
+}
+
+p{
+  font-size: 1.5em;
+  padding: 0 9vw;
+  line-height: 2em;
+  width: 60vw;
+  max-width:500px;
+}
+
+#about-loc a{
+  display:none;
+}
+#about-loc #mapcontainer{
+  display:flex;
+  width:100%;
+  height:20px;
+  justify-content:center;
+  border: 2px solid purple;
+}
+#about-loc #address{
+  background-color: black;
+  position:absolute;
+  min-height: auto;
+  min-width: 200px;
+  width: 15vw;
+  margin-top: 75px;
+  margin-left:-50px;
+  z-index:10;
+  opacity: .6;
+}
+#about-loc #address p{
+  padding: 5px;
+  width:100%;
+  font-size:.75 em;
+  color:white;
+}
+#about-loc #address a{
+  display:block;
+  padding: 5px;
+  width:100%;
+  font-size:.75 em;
+  color:white;
+}
+
+#googleMap {
+  min-height: 400px;
+  min-width: 300px;
+  width:40vw;
+  border: 2px solid green;
+}
+
+#about-accom {
+  z-index:20; 
+}
+
+#venue label{
+  cursor:pointer;
+  height: auto;
+  position:relative;
+  z-index:100;
+  text-align:center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#venue .slider-item{
+  background-size: cover;
+}
+#venue input{
+  display:none;
+}
+
+
+#venue-main{
+  background-image:url('http://www.labanquets.com/galleries/lefoyer/Le%20Foyer%20Ballroom%20Los%20Angeles%20Wedding%20Venues%20and%20Banquet%20Halls%20in%20North%20Hollywood%20(60).jpg');
+  
+}
+#venue-solaris{
+  background-image:url('http://www.theelan.com/images/image7(1).jpg');
+  
+}
+#venue-black{
+  background-image:url(http://vertigo.la/wp-content/uploads/2014/05/vertigo_event_venue_black_banquet1600.jpg);
+}
+#venue-deck{
+  background-image:url('http://www.labanquets.com/galleries/patio/Brandview%20Patio%20by%20LA%20Banquets%20Outdoor%20wedding%20venues%20in%20Los%20Angeles%20and%20banquet%20halls%20in%20glendale%20CA%20(1).jpg');
+  background-size: auto 115vh;
+}
+#venue-cafe{
+  background-image:url('http://www.labanquets.com/galleries/lefoyer-lounge/Le%20Foyer%20Lounge%20Banquet%20Halls%20in%20North%20Hollywood%20Wedding%20Venues%20(3).jpg');
+} 
+
+#venuemain:checked ~ .slider-content{
+  margin-left: 0vw;
+}
+#venuesolaris:checked ~ .slider-content{
+  margin-left: -200vw;
+}
+#venueblack:checked ~ .slider-content{
+  margin-left: -100vw;
+}
+#venuedeck:checked ~ .slider-content{
+  margin-left: -300vw;
+}
+#venuecafe:checked ~ .slider-content{
+  margin-left: -400vw;
+}
+
+#venueintro{
+  background:grey;
+  color:white;
+  display:flex;
+  flex-wrap:wrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  padding:0vw;
+}
+#venueintro h1, #venueintro h3{
+  width: 70vw;
+}
+#venueintro label{
+  width: 50vw;
+  font-family: 'Josefin Sans', 'Quicksand', 'Raleway', 'sans-serif';
+  font-size: 1.5em;
+  border-radius:5px;
+  background-color: green;
+  border:none;
+  height: 10vh;
+  min-height: 40px;
+}
+#hider{display:none;}
+#hider:checked ~ .slider-cover{
+  transition: opacity 300ms ease,
+              display 300ms ease 300ms;
+  opacity:0;
+  display:none;
+}
+#contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#contact form{
+  height:auto;
+  
+  display: block;
+  max-width: 400px;
+  width: 60vw;
+}
+#contact form *{
+  width: 100%;
+  margin: 10px;
+  font-size: 1.75em;
+  border: 3px solid grey;
+  border-radius: 7px;
+  transition: border 500ms ease;
+  padding: 5px;
+}
+#contact form *:hover{
+  border: 3px solid green;
+}
+
+
+
+
+
+@media screen and (min-width: 801px) {
+  #venue .slide-left, #venue .slide-right{
+    display: none;
+  }
+  #venue .slider-item{
+    
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+  .slide-tabs{
+    display:none !important;
+  }
+  #about-loc #address p{
+  font-size:1.2em;
+  color:white;
+  }
+  #googleMap {
+  min-height: 400px;
+  min-width: 300px;
+  width:70vw;
+  border: 2px solid green;
+  }
+  #about-loc p{
+  font-size: 1.75em;
+  width:auto;
+  padding: 0 15vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  h1{
+    font-size:3em;
+  }
+  p {
+    font-size: 1.25em;
+    padding: 0 15vw;
+    line-height: 1.5em;
+  }
+  #mapContainer {
+    display: none;
+  }
+  #about-loc a{
+    text-decoration:none;
+    font-size:1.5em;
+    display: block;
+  }
+  
+  .slider-description{
+    display:none;  
+  }
+}
+
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*slider stuf*/
+
+.slider-container, .slider-cover {
+  height: 105vh;
+  width: 100vw;
+  background: none;
+  
+}
+.slider-cover{
+  z-index: 150;
+  position:relative;
+}
+ 
+
+.slide-left,
+.slide-right {
+  height: 10vmin;
+  width: 10vmin;
+  
+  opacity: .01 ;
+  background-color: black;
+  position: absolute;
+  transition: opacity 400ms ease;
+  z-index: 100;
+  top:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:20vmin;
+  margin: -5vmin 3.5vmin 0 .85vmin; 
+}
+.slide-left div, .slide-right div{
+  font-size:7vmin;
+  color:green;
+}
+.slide-active{
+  display:flex;
+  opacity:.45;
+}
+.slide-right {
+  right: 0px;
+}
+
+
+
+.slider-content {
+  height: 105vh;
+  width: auto;
+  margin-left: -0vw;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  transition: margin-left 300ms ease;
+  justify-cintent:flex-start;
+}
+
+.slider-item {
+  width: 100vw;
+  height: 105vh;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+  overflow:hidden;
+  padding:00;
+}
+
+.slide-tabs{
+  height:105vh;
+  max-width: 20vw;
+  position:absolute;
+  right:0;
+  border: 2px solid red;
+  display:flex;
+  flex-wrap: wrap;
+}
+.slide-tabs .tab-item{
+  width:100%;
+  background-color:black;
+  height:10vh;
+  font-family: 'Quicksand', 'Josefin Sans', 'Raleway', 'sans-serif';
+  font-size: 1.75em;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color:white;
+  opacity: .5;
+  transition: opacity 300ms ease;
+}
+.slide-tabs  .tab-item:hover{
+  opacity:1;
+}
+
+.slider-description{
+  background-color:black;
+  color:white;
+  font-size:1.5em;
+  width: 77vw;
+  max-height: 20vh;
+  height: auto;
+  min-height: 200px;
+  bottom:0;
+  position:absolute;
+}
+
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*parallax stuff*/
+
+.big-container {
+  transform: translateZ(0);
+  height: auto;
+  overflow:hidden;
+}
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin-x: 100%;
+}
+
+.parallax-component {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin-x: 100%;
+  overflow: hidden;
+}
+
+.parallax-back {
+  transform: translateZ(-5px) scale(6);
+}
+
+.parallax-fore {
+  transform: translateZ(0);
+}
+
+.parallax-group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+.hamburger label {
+  display: block;
+  background: black;
+  border: none;
+  outline: 0;
+  position: fixed;
+  z-index: 2050;
+  transition: right 300ms ease;
+  opacity: .5;
+}
+
+.hamburger label:hover {
+  opacity: 1;
+}
+
+.hamburger-icon {
+  padding: 0vmin .5em 10vmin 0em;
+  cursor: pointer;
+}
+
+#toggle:checked ~ .hamburger label {
+  background: lightblue;
+}
+
+.hamburger-layer {
+  display: block;
+  width: 9vmin;
+  height: 1.8vmin;
+  background: red;
+  position: relative;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  margin: 2vmin 0 0 2vmin;
+}
+
+.hamburger-layer:before,
+.hamburger-layer:after {
+  content: "";
+  background: inherit;
+  display: block;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.hamburger-layer:before {
+  top: 200%;
+}
+
+.hamburger-layer:after {
+  top: 400%;
+}
+
+.hamburger-to-cross {
+  -webkit-animation-name: hamburger-icon-cross;
+  animation-name: hamburger-icon-cross;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.hamburger-to-cross:before {
+  -webkit-animation-name: hamburger-icon-cross-before;
+  animation-name: hamburger-icon-cross-before;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.hamburger-to-cross:after {
+  -webkit-animation-name: hamburger-icon-cross-after;
+  animation-name: hamburger-icon-cross-after;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.hamburger-from-cross {
+  -webkit-animation-name: hamburger-icon-from-cross;
+  animation-name: hamburger-icon-from-cross;
+}
+
+.hamburger-from-cross:before {
+  -webkit-animation-name: hamburger-icon-from-cross-before;
+  animation-name: hamburger-icon-from-cross-before;
+}
+
+.hamburger-from-cross:after {
+  -webkit-animation-name: hamburger-icon-from-cross-after;
+  animation-name: hamburger-icon-from-cross-after;
+}
+
+@-webkit-keyframes hamburger-icon-cross {
+  100% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 50% 0;
+  }
+}
+
+@keyframes hamburger-icon-cross {
+  100% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 50% 0;
+  }
+}
+
+@-webkit-keyframes hamburger-icon-cross-before {
+  20%,
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+@keyframes hamburger-icon-cross-before {
+  20%,
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes hamburger-icon-cross-after {
+  100% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin: -78% 0;
+  }
+}
+
+@keyframes hamburger-icon-cross-after {
+  100% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin: -78% 0;
+  }
+}
+
+@-webkit-keyframes hamburger-icon-from-cross {
+  0% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 50% 0;
+  }
+}
+
+@keyframes hamburger-icon-from-cross {
+  0% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 50% 0;
+  }
+}
+
+@-webkit-keyframes hamburger-icon-from-cross-before {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+@keyframes hamburger-icon-from-cross-before {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes hamburger-icon-from-cross-after {
+  0% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin: -78% 0;
+  }
+}
+
+@keyframes hamburger-icon-from-cross-after {
+  0% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin: -78% 0;
+  }
+}
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/
+
+
+/*-------------------------*/

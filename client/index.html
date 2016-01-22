@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>avenue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Raleway|Poiret+One|Josefin+Sans|Quicksand|Alegreya+Sans|Oxygen:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    
+    <link rel="stylesheet" href="css/reset.css">
+
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body>
+
+  <input type="checkbox" id="toggle">
+  <input type="checkbox" id="toggle2">
+  <section class="hamburger">
+    <label class="hamburger-icon" for="toggle">
+      <span class="hamburger-layer"></span>
+    </label>
+  </section>
+  
+  <div id="registertoggle"><label for="toggle2" ><span class="lnr lnr-calendar-full"></span></label></div>
+
+  <nav class="hide-nav" id="main-nav">
+    <ul>
+      <a href="#about">
+        <li>Who We Are</li>
+      </a>
+      <a href="#venue">
+        <li>Choose the Best Spot</li>
+      </a>
+      <a href="#dining">
+        <li>Enjoy the Finest Cuisine</li>
+      </a>
+      <a href="#personalize">
+        <li>Make it Your Own</li>
+      </a>
+      <a href="#services">
+        <li>Have the Best Night</li>
+      </a>
+      <a href="#reviews">
+        <li>What People Say</li>
+      </a>
+      <a href="#contact">
+        <li>Contact Us</li>
+      </a>
+
+
+    </ul>
+  </nav>
+
+  <div id="register">
+    <form class="section-container" id="registerform">
+      <div class="slider-container">
+        
+        <div class="bg-cover"></div>
+        <div class="slide-left"></div>
+        <div class="slide-right slide-active"></div>
+        <div class="slider-content" data-current= 0 data-max=12>
+          <div class="slider-item" id="register-init">
+            <h1>Check if your date's available!</h1>
+            
+          </div>
+          <div class="slider-item" >
+            <input type="text" name="name" placeholder="Name?"/>
+          </div>
+          <div class="slider-item" >
+            <input type="text" name="email" placeholder="Email?"/>
+          </div>
+          <div class="slider-item" >
+            <select type="text" name="room">
+              <option value="">Room?</option>
+              <option value="">Grand Ballroom</option>
+              <option value="">The Blackroom</option>
+              <option value="">The Solaris Room</option>
+              <option value="">The Deck</option>
+              <option value="">The Lounge</option>
+            </select>
+          </div>
+          <div class="slider-item" >
+            <input type="number" name="email" placeholder="People?" min="0" step="1"/>
+          </div>
+          <div class="slider-item" id="register-dining">
+            <input type="radio" name="diningchoice" id="choice-1"/>
+            <label for="choice-1" id="dining-choice1" class="register-dining-choice">
+              Package 1
+            </label>
+            <input type="radio" name="diningchoice" id="choice-2"/>
+            <label for="choice-2" id="dining-choice2" class="register-dining-choice">
+              Package 2
+            </label>
+            <input type="radio" name="diningchoice" id="choice-3"/>
+            <label for="choice-3" id="dining-choice3" class="register-dining-choice">
+              Package 3
+            </label>
+          </div>
+          <div class="slider-item" id="register-drinking">
+            <input type="radio" name="drinkingchoice" id="choice-4"/>
+            <label for="choice-4" id="drinking-choice1" class="register-drinking-choice">
+              Package 1
+            </label>
+            <input type="radio" name="drinkingchoice" id="choice-5"/>
+            <label for="choice-5" id="drinking-choice2" class="register-drinking-choice">
+              Package 2
+            </label>
+            <input type="radio" name="drinkingchoice" id="choice-6"/>
+            <label for="choice-6" id="drinking-choice3" class="register-drinking-choice">
+              Package 3
+            </label>
+          </div>
+          <div class="slider-item" >
+            Current Seating Plan:
+            <canvas></canvas>
+          </div>
+          <div class="slider-item" >
+            Set A Color Scheme
+            <input type="color" name="color scheme"/>
+          </div>
+          <div class="slider-item" >
+            <button>Checkout</button>
+            <button>Book Another</button>
+            <button>More options</button>
+          </div>
+          <div class="slider-item" >
+            Insurance?
+          </div>
+          
+          <div class="slider-item" id="partners">
+            <h1>Have Contact Me:</h1>
+            
+            <label for="decor-contact">Concepts Event Design (furniture and decorations)</label>
+            <input type="checkbox" name="decor-contact" id="decor-contact" />
+            <label for="floral-contact">Allen's Flowers(florist)</label>
+            <input type="checkbox" name="floral-contact" id="floral-contact" />
+            <label for="printing-contact">Admit One (printing)</label>
+            <input type="checkbox" name="printing-contact" id="printing-contact"/>
+            
+            
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+<div class="big-container"></div>
+  <div class="parallax ">
+    <div class="jumbo-container parallax-group">
+
+      <div class="parallax-component parallax-fore" id="jumbo-text">
+
+        <span id="title-jumbo">aVenue Banquets</span>
+        <h3>the pinnacle of premium event hosting</h3>
+      </div>
+      <a href="#about" class="slidenext">Next</a>
+      <div class="parallax-component parallax-back" id="jumbo-bg">
+
+      </div>
+    
+    </div>
+  </div>
+    <section class="section-container" id="about">
+      <div class="slider-container">
+        <div class="bg-cover"></div>
+        <div class="slide-left" id="leftslide"></div>
+        <div class="slide-right slide-active" id="rightslide"></div>
+        <div class="slider-content" data-current=0 data-max=3>
+          <div class="slider-item" id="about-init">
+
+            <h1>hey there!</h1>
+            <br />
+            <p>Welcome to aVenue Banquets, the premiere event hosting venue in sunny southern california. With our five-star service, stylish atmosphere, and expert culinary team, we're dedicated to throwing <i>you</i> the best event in SoCal.</p>
+          </div>
+          <div class="slider-item" id="about-loc">
+            <p>Nestled in the auspicious island of Coronado, we are located where serenity and city bustle seamlessly integrate. See the sights of San Diego, have an elegant after-conference dinner or enjoy the resort island after the party.</p>
+            <a href="https://www.google.com/maps/place/32%C2%B041'25.6%22N+117%C2%B012'35.0%22W/@32.6894326,-117.2041328,408m/data=!3m1!1e3!4m2!3m1!1s0x0:0x0">Find us here.   |</a>
+            <a href="#contact">|   More location info?</a>
+            <div id="mapContainer">
+              <div id="address">
+                <h6>aVenue Banquets</h6>
+                <p>767 Rogers Rd.
+                  <br> Coronado, CA 92118</p>
+                <a href="https://www.google.com/maps/place/32%C2%B041'25.6%22N+117%C2%B012'35.0%22W/@32.6894326,-117.2041328,408m/data=!3m1!1e3!4m2!3m1!1s0x0:0x0">Directions?</a>
+              </div>
+              <div id="googleMap"></div>
+            </div>
+          </div>
+          <div class="slider-item" id="about-accom">
+            <p>From our expansive <a href="">Grand Ballroom</a>, to the luminous <a href="">Solaris Room</a>, to the breathtaking views on <a href="">the Deck</a>, we offer the best location to host your event. Whether it be a lifetime commitment, conference,
+              or social event, aVenue is your solution.
+            </p>
+            <a href="#venue" class="slidenext">Next</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-container" id="venue">
+      <input type="radio" id="hider"/>
+      <div class="slider-cover" id="venueintro">
+        <h1>Welcome to the virtual tour!</h1>
+        <h3>Ready to find the perfect setting?</h3>
+        
+        <label for="hider">Lets Get Started!</label>
+      </div>
+      <div class="slider-container">
+        
+        <input type="radio" name="gallery" id="venuemain" checked />
+        <input type="radio" name="gallery" id="venuesolaris" />
+        <input type="radio" name="gallery" id="venueblack" />
+        <input type="radio" name="gallery" id="venuedeck" />
+        <input type="radio" name="gallery" id="venuecafe" />
+
+        <div class="slide-tabs">
+          <label class="tab-item" for="venuemain">Grand Ballroom</label>
+          <label class="tab-item" for="venueblack">Blackroom</label>
+          <label class="tab-item" for="venuesolaris">Solaris Room</label>
+          <label class="tab-item" for="venuedeck">The Deck</label>
+          <label class="tab-item" for="venuecafe">The Lounge</label>
+        </div>
+
+        <div class="slide-left"></div>
+        <div class="slide-right slide-active"></div>
+        <div class="slider-content" data-current=0 data-max=5>
+          <div class="slider-item" id="venue-main">
+            <div class="slider-description">
+              Seating apporximately 600 people, the Grand Ballroom is a tribute to traditional style with a nod to Art Nouveau. A popular setting for weddings, the grandeur of this expansive hall will dazzle your guests and make it an event to remember.
+            </div>
+          </div>
+          <div class="slider-item" id="venue-black"></div>
+          <div class="slider-item" id="venue-solaris"></div>
+          <div class="slider-item" id="venue-deck"></div>
+          <div class="slider-item" id="venue-cafe"></div>
+
+        </div>
+        
+      </div>
+       <a href="#dining" class="slidenext">Next</a>
+    </section>
+
+    <section class="section-container" id="dining">
+        <div class="slider-container">
+       <div class="slide-left"></div>
+        <div class="slide-right slide-active"></div>
+        <div class="slider-content" data-current=0 data-max=6>
+          <div class="slider-item" id="diningintro">
+            <div class="bg-cover" id=""></div>
+            <h1>Relish our Exquisite Flavors</h1>  
+            <p>Experienced in a profusion of flavors and clutures, our professional culinary team will craft the paragon of meals for the ideal event.</p>
+          </div>
+          <div class="slider-item" id="diningbuffet">
+            <div class="bg-cover" id=""></div>
+            <h1>Enticing the Masses</h1>
+            <p>Our buffet option is more than a collection of options. It is the threshold to a universe of the most delectable flavors from across the world.  <br />
+            <a href="">View a sample menu</a></p>
+          </div>
+           <div class="slider-item" id="diningfamily">
+             <div class="bg-cover" id=""></div>
+            <h1>Lay It All Out</h1>
+            <p>Our family style option is even more a treat to the taste than it is to the eyes. With a persistent flow out of the  kitchens, your guests will be begging to finish saying grace.  <br />
+            <a href="">View a sample menu</a></p>
+          </div>
+           <div class="slider-item" id="diningplated">
+             <div class="bg-cover" id=""></div>
+            <h1>Simple Elegance</h1>
+            <p>Serve individuals with our 3-course plated option, each plate handcrafted to delight the senses. This full-service option will add an indispensible element of class to your event.  <br />
+            <a href="">View a sample menu</a></p>
+          </div>
+          <div class="slider-item" id="diningcocktail">
+            <div class="bg-cover" id=""></div>
+            <h1>Bursts of Flavor</h1>
+            <p>Host the ultimate cocktail party with enticing hors d'oeurves, scenic views, and an expert drink mixer. These petite embodiments of pure elation skillfully fuse traditional flavor with modern zest. <br />
+            <a href="">View a sample menu</a></p>
+          </div>
+          <div class="slider-item" id="diningdrinks">
+            <div class="bg-cover" id=""></div>
+            <h1>Let It Flow</h1>
+            <p>Quench the collective thirst with a selection of premium wines, beer, and liquor in our Open Bar, Limited Bar, or Table Service options. Alternatively, we have a BYO(bring your own) option.<br /></p>            <a href="#personalize" class="slidenext">Next</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-container" id="personalize">
+      <div class="slider-container">
+        
+        <div class="slide-left"></div>
+        <div class="slide-right slide-active"></div>
+        <div class="slider-content" data-current=0 data-max=6>
+          <div class="slider-item" id="pers-intro">
+             <div class="bg-cover" id=""></div>
+            <h1>Distiguish your event.</h1>
+            <p>From decorations to lighting to seating arrangements, we offer a diverse range of services to perfect the mood and atmosphere of your event.</p>
+          </div>
+          <div class="slider-item" id="pers-light">
+             <div class="bg-cover" id=""></div>
+            <h1>Light it up</h1>
+            <p>All of our rooms are fitted with RGB lamps, meaning that we can display any color conceivable. Brighten up the room for a festive celebration, or turn down for an epic party, we can set any level of brightness and set up any specialized lighting.</p>
+          </div>
+          <div class="slider-item" id="pers-seating">
+             <div class="bg-cover" id=""></div>
+            <h1>Set it up.</h1>
+            <p>Select from popular layouts, or design seats and tables the way you want. Stage? Done. Buffet? You got it. Dance floor? Oh, yeah.</p>
+            <button>View floor plans</button>
+          </div>
+          <div class="slider-item" id="pers-decor">   
+             <div class="bg-cover" id=""></div>
+            <h1>Embellish.</h1>
+            <p>We can help you tweak the finest details, whether flowers to cutlery to tablecloth.  To serve up your ideal event, we've partnered with San Diego's finest: Concepts Event Design and Allen's Flowers. Paint your vision on the canvas of our classy venues.</p>
+          </div>
+          <div class="slider-item" id="pers-furn">
+             <div class="bg-cover" id=""></div>
+            <h1>Make a statement.</h1>
+            <p>Our partner, Concepts Event Design, has a plethora of furniture so you can customize the chairs, sofas, etc. to your heart's content. With functional executive to elegant dining, they can assist you in generating the perfect event.</p>
+          </div>
+          <div class="slider-item" id="pers-print">
+             <div class="bg-cover" id=""></div>
+            <h1>Put your name on it.</h1>
+            <p>Individualize your conference with custom nametags, napkins, lanyards, and more. Our partner Admit One products can put your brand all over your event.</p>
+            <a href="#services" class="slidenext">Next</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="section-container" id="services">
+      <div class="slider-container">
+        
+        <div class="slide-left"></div>
+        <div class="slide-right slide-active"></div>
+        <div class="slider-content" data-current=0 data-max=5>
+          <div class="slider-item" id="amintro">
+             <div class="bg-cover" id=""></div>
+            <h1>Have the time of your life</h1>   
+            <p>Explore our other amenities to discover the subtle versatility of aVenue.</p>
+          </div>
+          <div class="slider-item" id="ament">
+             <div class="bg-cover" id=""></div>
+            <h1>Entertain.</h1>   
+            <p>From corporate to wedding entertainment, out partner SGM Events has it all. Book DJs, a jazz band, or a quartent and more. Don't settle for less, but expect the best.</p>
+          </div>
+          <div class="slider-item" id="amdisplay">
+             <div class="bg-cover" id=""></div>
+            <h1>Display.</h1>   
+            <p>We carry an ample amout of equipment for all your audio/visual needs. With 5000 lumens projectors, high-res speakers, integrated sound systems, lighting internet speed, and ultra HD 4K TVs, we can bring your event to the next level.</p>
+          </div>
+          <div class="slider-item" id="ampics">
+             <div class="bg-cover" id=""></div>
+            <h1>Create Memories</h1>   
+            <p>We have a talentaed in-house photography crew to aid you in immortalizing your experience. Well versed in the layout of the premises, they can take the best angles, applying ideas from experience.</p>
+          </div>
+          <div class="slider-item" id="aminsure">
+             <div class="bg-cover" id=""></div>
+            <h1>Be at Peace.</h1>   
+            <p>Although no one wants complications, there is always the possibility of an emergency or catastrophe. In such occurances, it is important to have event insurance.we offer plans covering liabilities, cancellation, and emergency staffing.</p>
+            <a href="#reviews" class="slidenext">Next</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-container" id="reviews">
+
+    </section>
+
+    <section class="section-container" id="contact">
+      <form action="" name="">
+        
+        <input type="text" id="text" placeholder="name?" />
+        
+        <input type="email" id="password" placeholder="email?"/>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <input type="submit" />
+      </form>
+    </section>
+  </div>
+ 
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqW27bz5j0Dat2dn_Eb6Bq8VmIziwopF0&callback=initMap">
+  </script>
+</body>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
