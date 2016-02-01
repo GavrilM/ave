@@ -1,0 +1,1 @@
+Scheduled = new Mongo.Collection("scheduled");

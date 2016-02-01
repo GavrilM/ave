@@ -12,7 +12,7 @@ Template.body.events({
           el.addClass("hamburger-to-cross");
         }
     },
-    "click .slide-left" : function(){
+    "click .slide-left" : function(event){
         var ret =$(event.target); 
         if(ret.prop('nodeName')  != 'DIV'){
           ret = ret.parent()
@@ -20,25 +20,36 @@ Template.body.events({
 
         slider(-1, $(ret.next()).next());
     },
-    "click .slide-right" : function(){
-        var ret =$(event.target); 
+    "click .slide-right" : function(event){
+        var ret = $(event.target);
         if(ret.prop('nodeName') != 'DIV'){
           ret = ret.parent()
         }
 
         slider(1, ret.next()); 
     },
+
     "click #venue .slider-container input" : function(){
         $('#venue .slider-content').removerAttr('style');
     },
     "click a" : function(e){
-         $root.animate({
-            scrollTop: $(e.target).offset().top},
+        e.preventDefault();
+        var ret = $(e.target);
+        if(ret.prop('nodeName') == 'LI'){
+            ret = ret.parent()
+        }
+        $('body').animate({
+            scrollTop: $(ret.attr('href')).offset().top},
         'slow');
-    }
+    },
+    "click #body-cover" : function(e){
+        $('#popin').removeClass("viewable");
+        $('#body-cover').removeClass("covering");
+    },
+
 });
 
-var $root = $('html, body');
+
 
 function slider(dir, container) {
   var contain = $(container);
