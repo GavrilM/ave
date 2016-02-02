@@ -164,12 +164,15 @@ h6{
   width: 60vw;
 }
 .cock-options{
-    display: none;
+
+  display:block;
+  width: 90vw;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
 }
-#cockcheck:checked ~ .cock-options{
-    display:block;
-    width: 90vw;
-    text-align: center;
+#cocktail:checked ~ .cock-options{
+    opacity:1;
 }
 #register-dining input, #register-drinking input{
   display:none;
@@ -202,16 +205,22 @@ label p {
 label span{
     font-size: 1.5em;
 }
-
+#submitter button{
+  width:60vw;
+  font-size: 1.5em;
+  border: 2px solid orange;
+  background: none;
+}
 #toggle2:checked ~ #register {
   margin-left: -00vw;
 }
-#register #partners {
-  
-}
 #register #partners label{
   display: block;
-  width: 80vw;
+}
+
+#register #partners label, #register #cocktails label{
+
+  width: 50vw;
   font-size: 1.5em;
 }
 

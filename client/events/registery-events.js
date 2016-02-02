@@ -1,38 +1,21 @@
 Template.registery.events({
-    "click .slide-right " :function(){
-        if(Session.get("dayset")){
-            alert("Please set a date first.")
-        }
+    "click .slide-right " :function(e){
+
     },
-    "submit #dayform": function(e){
-        var form = e.target;
-        var elements = form.elements;
+    "submit #registerform" : function(e){
+        var form = $(event.target);
         e.preventDefault();
-        Session.set("dayset", true);
-        Session.set("eventid", 777);
-        Session.set("namae", form.name.value);
-        Session.set("starttime", form.start.value);
-        Session.set("duration", form.duration.value);
-
-        $('#dates').children().first().fullCalendar('addEventSource',
-            {
-                events:[
-                    {
-                        title: "Your Event",
-                        start: Template.instance().dayOn.get()
-                    }
-                ],
-                color: 'orange',
-            }
-
-        );
-
-        console.log(Template.instance().eventslist.get());
-        $("#body-cover").trigger("click");
-        $('#register .slide-right').trigger("click");
-        console.log(Template.instance().dayOn.get());
-        for( var i = 0; i< elements.length; i++){
-            elements[i].value = "";
-        }
+        var obj = {};
+        obj.name = Session.get("namae");
+        obj.date = window.dayOn.get().toISOString();
+        obj.time = Session.get('starttime');
+        obj.length = Session.get('duration');
+        obj.email = form.email;
+        obj.amount = form.amount;
+        obj.loc = form.room;
+        obj.dine = form.diningchoice;
+        obj.drink = form.drinkingchoice;
+        
     }
+
 });

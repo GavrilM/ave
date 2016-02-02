@@ -1,12 +1,12 @@
 <template name="registery">
     <div id="register">
 
-        <form class="section-container" id="registerform">
+        <form class="section-container" id="registerform" name="registerform">
             <div class="slider-container">
 
                 <div class="bg-cover"></div>
                 <div class="slide-left"></div>
-                <div class="slide-right slide-active"></div>
+                <div class="slide-right slide-active" id="cal-right"></div>
                 <div class="slider-content" data-current= 0 data-max=12>
 
                     <div class="slider-item" id="register-init">
@@ -30,53 +30,53 @@
                     </div>
                     <div class="slider-item" >
                         <select required type="text" name="room">
-                            <option value="">Room?</option>
-                            <option value="">Grand Ballroom</option>
-                            <option value="">The Blackroom</option>
-                            <option value="">The Solaris Room</option>
-                            <option value="">The Deck</option>
-                            <option value="">The Lounge</option>
+                            <option value="any">Room?</option>
+                            <option value="grand">Grand Ballroom</option>
+                            <option value="obsidian">The Obsidian Room</option>
+
+                            <option value="deck">The Deck</option>
+                            <option value="lounge">The Lounge</option>
                         </select>
                     </div>
-                    <div class="slider-item">
+                    <div class="slider-item" id="cocktails">
                         <label for="cocktail">Cocktail Hour?</label>
-                        <input type="checkbox" name="cocktail" id="cockcheck">
+                        <input type="checkbox" name="cocktail" id="cocktail">
                         <div class="cock-options">
                             <label for="c-appetizers">Appetizers?</label>
-                            <input type="checkbox" name="c-appetizers" checked>
-                            <label for="c-openbar">Open Bar?</label>
-                            <input type="checkbox" name="c-openbar" checked>
+                            <input type="checkbox" name="c-appetizers" id="c-appetizers" checked>
+                            <label for="c-openbar"> Open Bar?</label>
+                            <input type="checkbox" name="c-openbar" id="c-openbar" checked>
                         </div>
                     </div>
                     <div class="slider-item" id="register-dining">
-                        <input type="radio" name="diningchoice" id="choice-1" required />
+                        <input type="radio" name="diningchoice" id="choice-1" required checked/>
                         <label for="choice-1" id="dining-choice1" class="register-dining-choice">
                             <span>Buffet</span>
                             <p>Guests self-serve from an array of options.</p>
                         </label>
-                        <input type="radio" name="diningchoice" id="choice-2"/>
+                        <input type="radio" name="diningchoice" id="choice-2" required/>
                         <label for="choice-2" id="dining-choice2" class="register-dining-choice">
                             <span>Plated</span>
                             <p>Guests are served in a contemporary restaurant setting.</p>
                         </label>
-                        <input type="radio" name="diningchoice" id="choice-3"/>
+                        <input type="radio" name="diningchoice" id="choice-3" required/>
                         <label for="choice-3" id="dining-choice3" class="register-dining-choice">
                             <span>Family Style</span>
                             <p>Guests are seated around a communal collection of dishes.</p>
                         </label>
                     </div>
                     <div class="slider-item" id="register-drinking">
-                        <input type="radio" name="drinkingchoice" id="choice-4" required />
+                        <input type="radio" name="drinkingchoice" id="choice-4" required checked/>
                         <label for="choice-4" id="drinking-choice1" class="register-drinking-choice">
                             <span>Open Bar</span>
                             <p>Guests are allowed unlimited drinks from the bar.</p>
                         </label>
-                        <input type="radio" name="drinkingchoice" id="choice-5"/>
+                        <input type="radio" name="drinkingchoice" id="choice-5" required/>
                         <label for="choice-5" id="drinking-choice2" class="register-drinking-choice">
                             <span>Limited Bar</span>
                             <p>Guests are allowed a certain number of drinks or are constrained to certain types of drinks at the bar.</p>
                         </label>
-                        <input type="radio" name="drinkingchoice" id="choice-6"/>
+                        <input type="radio" name="drinkingchoice" id="choice-6" required/>
                         <label for="choice-6" id="drinking-choice3" class="register-drinking-choice">
                             <span>Table Service</span>
                             <p>Guests are waited on, most commonly paired with Plated Dining.</p>
@@ -88,10 +88,10 @@
                     </div>
                     <div class="slider-item" >
                         Set A Color Scheme
-                        <input type="color" name="color scheme"/>
+                        <input type="color" name="color-scheme"/>
                     </div>
-                    <div class="slider-item" >
-                        <button>Checkout</button>
+                    <div class="slider-item" id="submitter">
+                        <button type="submit" form="registerform">Checkout</button>
                         <button>Book Another</button>
                         <button>More options</button>
                     </div>
