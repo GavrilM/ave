@@ -25,7 +25,7 @@ Template.body.events({
         var ret = $(event.target);
         if(ret.attr("id") === 'cal-right'){
             if(!Session.get("dayset")){
-                alert("Please set a date first.")
+                alert("Please select a date to continue.")
                 console.log("niqqa");
                 return false;
             }

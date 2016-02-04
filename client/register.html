@@ -1,13 +1,13 @@
 <template name="registery">
     <div id="register">
 
-        <form class="section-container" id="registerform" name="registerform">
+        <div class="section-container" id="registerform">
             <div class="slider-container">
 
                 <div class="bg-cover"></div>
                 <div class="slide-left"></div>
                 <div class="slide-right slide-active" id="cal-right"></div>
-                <div class="slider-content" data-current= 0 data-max=12>
+                <div class="slider-content" data-current= 0 data-max=9>
 
                     <div class="slider-item" id="register-init">
                         <h1>Reserve your date!</h1>
@@ -22,82 +22,84 @@
                     </div>
 
                     <div class="slider-item">
-                        <input type="text" name="email" placeholder="Email?"/> <br>
-
+                        <form name="emailform" id="emailform">
+                        <input data-email type="text" name="email" placeholder="Email?" required/> <br>
+                        </form>
                     </div>
                     <div class="slider-item">
-                        <input type="number" name="amount" required placeholder="People?" min="0" step="1"/> <br>
+                        <form id="amountform">
+                        <input data-min = 1 type="number" name="amount" required placeholder="People?" min="0" max="600" step="1"/> <br>
+                        </form>
                     </div>
                     <div class="slider-item" >
+                        <form id="roomform">
                         <select required type="text" name="room">
-                            <option value="any">Room?</option>
-                            <option value="grand">Grand Ballroom</option>
-                            <option value="obsidian">The Obsidian Room</option>
+                            <option value="Any">Room?</option>
+                            <option value="Grand Ballroom">Grand Ballroom</option>
+                            <option value="Obsidian Room">The Obsidian Room</option>
 
-                            <option value="deck">The Deck</option>
-                            <option value="lounge">The Lounge</option>
+                            <option value="Deck">The Deck</option>
+                            <option value="Lounge">The Lounge</option>
                         </select>
+                        </form>
                     </div>
                     <div class="slider-item" id="cocktails">
+                        <form id="cockform">
                         <label for="cocktail">Cocktail Hour?</label>
                         <input type="checkbox" name="cocktail" id="cocktail">
                         <div class="cock-options">
                             <label for="c-appetizers">Appetizers?</label>
-                            <input type="checkbox" name="c-appetizers" id="c-appetizers" checked>
+                            <input type="checkbox" name="cappetizers" id="cappetizers" checked>
                             <label for="c-openbar"> Open Bar?</label>
-                            <input type="checkbox" name="c-openbar" id="c-openbar" checked>
+                            <input type="checkbox" name="copenbar" id="copenbar" checked>
                         </div>
+                        </form>
                     </div>
                     <div class="slider-item" id="register-dining">
-                        <input type="radio" name="diningchoice" id="choice-1" required checked/>
+                        <form id="diningform">
+                        <input type="radio" name="diningchoice" id="choice-1" required checked value=1/>
                         <label for="choice-1" id="dining-choice1" class="register-dining-choice">
                             <span>Buffet</span>
                             <p>Guests self-serve from an array of options.</p>
                         </label>
-                        <input type="radio" name="diningchoice" id="choice-2" required/>
+                        <input type="radio" name="diningchoice" id="choice-2" required value=2/>
                         <label for="choice-2" id="dining-choice2" class="register-dining-choice">
                             <span>Plated</span>
                             <p>Guests are served in a contemporary restaurant setting.</p>
                         </label>
-                        <input type="radio" name="diningchoice" id="choice-3" required/>
+                        <input type="radio" name="diningchoice" id="choice-3" required value=3/>
                         <label for="choice-3" id="dining-choice3" class="register-dining-choice">
                             <span>Family Style</span>
                             <p>Guests are seated around a communal collection of dishes.</p>
                         </label>
+                        </form>
                     </div>
                     <div class="slider-item" id="register-drinking">
-                        <input type="radio" name="drinkingchoice" id="choice-4" required checked/>
+                        <form id="drinkform">
+                        <input type="radio" name="drinkingchoice" id="choice-4" required checked value=1/>
                         <label for="choice-4" id="drinking-choice1" class="register-drinking-choice">
                             <span>Open Bar</span>
                             <p>Guests are allowed unlimited drinks from the bar.</p>
                         </label>
-                        <input type="radio" name="drinkingchoice" id="choice-5" required/>
+                        <input type="radio" name="drinkingchoice" id="choice-5" required value=2/>
                         <label for="choice-5" id="drinking-choice2" class="register-drinking-choice">
                             <span>Limited Bar</span>
                             <p>Guests are allowed a certain number of drinks or are constrained to certain types of drinks at the bar.</p>
                         </label>
-                        <input type="radio" name="drinkingchoice" id="choice-6" required/>
+                        <input type="radio" name="drinkingchoice" id="choice-6" required value=3/>
                         <label for="choice-6" id="drinking-choice3" class="register-drinking-choice">
                             <span>Table Service</span>
                             <p>Guests are waited on, most commonly paired with Plated Dining.</p>
                         </label>
+                        </form>
                     </div>
-                    <div class="slider-item" >
-                        Current Seating Plan:
-                        <canvas></canvas>
-                    </div>
-                    <div class="slider-item" >
-                        Set A Color Scheme
-                        <input type="color" name="color-scheme"/>
-                    </div>
+
                     <div class="slider-item" id="submitter">
-                        <button type="submit" form="registerform">Checkout</button>
+                        <button id="submitform">Checkout</button>
                         <button>Book Another</button>
-                        <button>More options</button>
+                        <button id="nexter">More options</button>
                     </div>
-                    <div class="slider-item" >
-                        Insurance?
-                    </div>
+
 
                     <div class="slider-item" id="partners">
                         <h1>Have Contact Me:</h1>
@@ -113,6 +115,6 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 </template>

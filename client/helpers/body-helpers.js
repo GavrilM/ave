@@ -3,6 +3,7 @@ Template.registery.onCreated(function(){
     this.calendar = $('#dates').children().first();
     this.eventslist = new ReactiveVar(getDates());
     Session.set("dayset", false);
+    this.obj = {};
 });
 
 Template.fullcalendar.onCreated = function () {
@@ -30,7 +31,7 @@ Template.registery.helpers({
                     var events = $('#dates').children().first().fullCalendar('clientEvents');
                     events[events.length -1].start = date;
                     $('#dates').children().first().fullCalendar('updateEvent', events[events.length -1]);
-                    that.dayOn.set(date);
+                    window.dayOn.set(date);
                     return;
                 }
                 window.dayOn.set(date);
@@ -121,3 +122,4 @@ function hasevent(date){
     console.log(arr);
     return arr;
 }
+
