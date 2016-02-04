@@ -76,6 +76,9 @@ Template.registery.helpers({
 
 
     },
+    //-------------
+    //get functions
+    //-------------
     dateset: function(){
         return Session.get('dayset');
     },
@@ -90,7 +93,33 @@ Template.registery.helpers({
     },
     getlength: function(){
         return Session.get('duration');
+    },
+    getemail: function(){
+        return Template.instance().get("obj").amount;
+    },
+    getroom: function(){
+        return Template.instance().get("obj").room;
+    },
+    getemail: function(){
+        return Template.instance().get("obj").email;
+    },
+    getcocktail: function(){
+        return Template.instance().get("obj").cocktail;
+    },
+    getfood: function(){
+        return Template.instance().get("obj").food;
+    },
+    getdrink: function(){
+        return Template.instance().get("obj").drink;
+    },
+    getemail: function(){
+        return Template.instance().get("obj").email;
+    },
+    gettotal: function(){
+
     }
+
+
 
 
 });
@@ -122,4 +151,3 @@ function hasevent(date){
     console.log(arr);
     return arr;
 }
-

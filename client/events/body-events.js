@@ -13,7 +13,7 @@ Template.body.events({
         }
     },
     "click .slide-left" : function(event){
-        var ret =$(event.target); 
+        var ret =$(event.target);
         if(ret.prop('nodeName')  != 'DIV'){
           ret = ret.parent()
         }
@@ -62,7 +62,7 @@ Template.body.events({
         var elements = form.elements;
         e.preventDefault();
         Session.set("dayset", true);
-        Session.set("eventid", 777);
+      
         Session.set("namae", form.name.value);
         Session.set("starttime", form.start.value);
         Session.set("duration", form.duration.value);
@@ -95,11 +95,11 @@ Template.body.events({
 
 function slider(dir, container) {
   var contain = $(container);
-  
+
   var current = parseInt(contain.data("current"));
-    
+
   var max = parseInt(contain.data("max")) - 1;
-   
+
   if ((dir < 0 && current <= 0)  || (dir > 0 && current >= max)) {
 
     return;
@@ -113,10 +113,10 @@ function slider(dir, container) {
     contain.data("current", current);
   }
   contain.css("margin-left", "-" + current + "00vw");
-  
+
    if(current == max) {
     contain.prev().removeClass("slide-active");
-  } 
+  }
   else if(current == 0){
     contain.prev().prev().removeClass("slide-active");
   }
@@ -125,5 +125,5 @@ function slider(dir, container) {
     contain.prev().prev().addClass("slide-active");
 
   }
-  
+
 }

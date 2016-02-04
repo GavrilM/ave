@@ -18,7 +18,11 @@ Template.registery.events({
     "click #submitform" : function(e,t){
 
         e.preventDefault();
-        console.log(t.obj)
+        t.obj.name = Session.get("namae");
+        t.obj.start = Session.get("starttime");
+        t.obj.length = Session.get("duration");
+        console.log(t.obj);
+        Pending.insert
 
     },
     "submit #emailform": function(e,t){
