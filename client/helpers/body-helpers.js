@@ -47,7 +47,12 @@ Template.registery.helpers({
                 {
                     events : Template.instance().eventslist.get()
                 }
-            ]
+            ],
+            windowResize: function(view ){
+                console.log("resize");
+                $('#dates').children().first().fullCalendar('option', 'height',$(window).height() *.7 );
+            },
+            height: $(window).height() *.7,
 
 
         };

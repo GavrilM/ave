@@ -23,6 +23,7 @@ Template.body.events({
     "click .slide-right" : function(event){
 
         var ret = $(event.target);
+
         if(ret.attr("id") === 'cal-right'){
             if(!Session.get("dayset")){
                 alert("Please select a date to continue.")

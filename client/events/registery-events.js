@@ -5,8 +5,7 @@ Template.registery.events({
         if(ret.prop('nodeName') != 'DIV'){
             ret = ret.parent()
         }
-        var on = ret.next().data('current');
-        ret.next().data('current',on++);
+
         var contain = $("#registerform .slider-content");
         var num = contain.data("current");
         console.log(num);
@@ -14,6 +13,7 @@ Template.registery.events({
             getform($(contain.children()[contain.data("current")])).submit();
 
         }
+
     },
     "click #submitform" : function(e,t){
 
@@ -22,8 +22,19 @@ Template.registery.events({
         t.obj.start = Session.get("starttime");
         t.obj.length = Session.get("duration");
         console.log(t.obj);
-        Pending.insert
+        Meteor.call("queueDate", t.obj, function(err,res){
+            Router.go('/checkout/' + res);
 
+        });
+
+
+
+    },
+    "submit #changeform" :function(e){
+        e.preventDefault();
+        var form = e.target;
+        Session.set("starttime", form.time.value);
+        Session.set("duration", form.number.value);
     },
     "submit #emailform": function(e,t){
         e.preventDefault();
@@ -39,7 +50,12 @@ Template.registery.events({
     },
     "submit #amountform": function(e,t){
         e.preventDefault();
-        if(e.target.amount.value <= 0){
+        if(e.target.amount.value <= 0 || e.target.amount.value > 600){
+            if(e.target.amount.value >600){alert("Sorry! Our max capacity is 600.");
+                e.cancelBubble();
+                return;
+            }
+
             alert("Please enter valid amount.");
             e.cancelBubble();
             return;
@@ -72,11 +88,21 @@ Template.registery.events({
        $("#registerform .slide-right").trigger("click");
     },
     "keydown #registerform input": function(e,t){
-
+        console.log("keyed");
         if(e.which == '9' || e.which=='13'){
+
             e.preventDefault();
 
-            $("#registerform .slide-right").trigger("click");
+            //$("#registerform .slide-right").trigger("click");
+        }
+    },
+    "keypress #registerform input": function(e,t){
+
+        if( e.which=='13'){
+
+            e.preventDefault();
+
+
         }
     },
 

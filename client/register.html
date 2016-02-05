@@ -15,8 +15,11 @@
                             {{> fullcalendar options id="thecalendar" }}
                             {{ filldates }}
                             {{#if dateset}}
-                                <input type="time" value={{gettime}}>
-                                <input type="number" value={{getlength}}>
+                                <form action="" id="changeform">
+                                    Time:<input type="time" value={{gettime}}>
+                                     Hours:<input type="number" value={{getlength}}>
+                                    <input type="submit" value="Change">
+                                </form>
                             {{/if}}
                         </div>
                     </div>

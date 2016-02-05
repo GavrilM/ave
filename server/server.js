@@ -7,12 +7,6 @@ Meteor.methods({
         });
     },
     "queueDate" : function(obj){
-        return Pending.insert({
-            day : date,
-            person: name,
-            duration: length
-        },function(err, id){
-          return id;
-        });
+        return Pending.insert(obj);
     }
 })

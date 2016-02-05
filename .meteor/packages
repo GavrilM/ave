@@ -21,3 +21,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 rzymek:fullcalendar
 reactive-var
 momentjs:moment
+iron:router
