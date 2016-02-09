@@ -1,0 +1,7 @@
+#cartlayout{
+    display:flex;
+    flex-wrap: wrap;
+}
+#editcost{
+    display: flex;
+}

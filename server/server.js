@@ -8,5 +8,10 @@ Meteor.methods({
     },
     "queueDate" : function(obj){
         return Pending.insert(obj);
+    },
+    changeDate: function(id, obj){
+        return Pending.update( {_id:id},
+            {$set: obj}
+        );
     }
 })

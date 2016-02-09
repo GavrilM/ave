@@ -19,6 +19,7 @@ Template.registery.events({
 
         e.preventDefault();
         t.obj.name = Session.get("namae");
+        t.obj.date = window.dayOn.get().toISOString();
         t.obj.start = Session.get("starttime");
         t.obj.length = Session.get("duration");
         console.log(t.obj);
@@ -69,11 +70,7 @@ Template.registery.events({
     },
     "submit #cockform": function(e,t){
         e.preventDefault();
-        t.obj.cocktail = {
-            yes: e.target.cocktail.value,
-            app: e.target.cappetizers.value,
-            app: e.target.copenbar.value
-        };
+        t.obj.cocktail = e.target.cocktail.checked;
     },
     "submit #register-dining": function(e,t){
         e.preventDefault();

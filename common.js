@@ -5,10 +5,11 @@ Router.route('/', function () {
     this.render('main');
 });
 
-Router.route('/checkout/:id', function () {
+Router.route('/checkout/:_id', function () {
     this.layout('cartlayout', {
         data: function () {
-            return Pending.findOne({_id: this.params._id})
+            console.log(this.params._id);
+            return Pending.findOne({_id: this.params._id});
         }
     });
 

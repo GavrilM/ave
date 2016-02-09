@@ -1,4 +1,4 @@
-Template.body.events({
+Template.main.events({
     "click #main-nav li" : function(){
         $(".hamburger-icon").trigger("click");
     },

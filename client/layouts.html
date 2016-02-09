@@ -1,3 +1,105 @@
 <template name="cartlayout">
-  <h3>For: {{name}}</h3>
+  <div id="cartlayout">
+    <form id="editfirst">
+      <h1>Checkout</h1>
+      <h3>For: {{#if editing}}
+                      <input required type="text" value={{name}}>
+                {{else}}
+                    {{name}}
+                {{/if}}</h3>
+      <h3>{{#if editing}}<input type="number" required min="0" max="600" step="1" value={{amount}}>{{else}}{{amount}} {{/if}} guests</h3>
+      <h3>Located in {{#if editing}}
+          <select required type="text" name="room" >
+              <option value="Any">Room?</option>
+              <option value="Grand Ballroom">Grand Ballroom</option>
+              <option value="Obsidian Room">The Obsidian Room</option>
+
+              <option value="Deck">The Deck</option>
+              <option value="Lounge">The Lounge</option>
+          </select>
+                    {{else}}
+                        {{getroom}}
+                    {{/if}}</h3>
+      <h3>On {{#if editing}}
+          <input type="date" name="date" value={{date}} >
+      {{else}}
+          {{getdate}}
+      {{/if}}</h3>
+      <h3>Starts at {{#if editing}}
+          <input type="time" name="start" required placeholder="Begin Time?" min="6:00" max="20:00" step=900 value={{start}}>
+      {{else}}
+          {{start}}
+      {{/if}}</h3>
+      <h3>Lasts {{#if editing}}
+          <input type="number" name="duration" max =8 min="2" value={{length}} >
+      {{else}}
+          {{length}}
+      {{/if}}hours</h3>
+      <h3>Email Address: {{#if editing}}
+          <input data-email type="text" name="email" placeholder="Email?" required value={{email}} />
+      {{else}}
+          {{email}}
+      {{/if}}</h3>
+      <button id="edit1">{{#if editing}}Submit{{else}}Edit{{/if}}</button>
+    </form>
+
+      <form id="editcost">
+          <div id="costitems">
+              <h3>Cost Estimates*</h3>
+              <h3>Rent Space: $550 x {{#if editing2}}
+                  <input type="number" name="duration" max =8 min="2" value={{length}} >
+              {{else}}
+                  {{length}}
+              {{/if}} hours = </h3>
+              <h3>Dining: {{#if editing2}}
+                  <select required type="text" name="room" >
+                      <option value="1/">Buffet</option>
+                      <option value="2/">Plated</option>
+                      <option value="3/">Family Style</option>
+
+                  </select>
+              {{else}}
+                  {{getfood}}
+              {{/if}}- ${{getfoodper}} x {{amount}} people = </h3>
+              <h3>Drinks: {{#if editing2}}
+                    <select required type="text" name="room" >
+                        <option value="1/">Open Bar</option>
+                        <option value="2/">Limited Bar</option>
+                        <option value="3/">Table Service</option>
+
+                    </select>
+                    {{else}}
+                        {{getdrink}}
+                    {{/if}} - ${{getdrinkper}} x {{amount}} people =  </h3>
+              {{#if cocktailhr}} <h3> Cocktail Hour{{#if editing2}}
+                  <input type="checkbox" checked >
+              {{/if}}: $7 x {{amount}} people = </h3>{{/if}}
+              <button id="edit2">{{#if editing2}}Submit{{else}}Edit{{/if}}</button>
+              <br><br>
+              <h3>Total:</h3>
+          </div>
+          <div id="costmoney">
+              <h3>${{getrentcost}}<br></h3>
+              <h3>${{getfoodcost}}<br></h3>
+              <h3>${{getdrinkcost}}<br></h3>
+              <h3>{{#if cocktailhr}} ${{getcockcost}}<br>{{/if}}</h3><br><br>
+              <h3>${{getcost}}</h3>
+          </div>
+      </form>
+      <form id="paynow">
+          <h1>Pay Deposit Now: $500</h1>
+          {{name}}
+          <input type="text" placeholder="Card Number">
+          <select required type="text" name="room" >
+              <option value="1/">MasterCard</option>
+              <option value="2/">VISA</option>
+              <option value="3/">AmEx</option>
+              <input type="number" placeholder="MM" min = 1 max = 12>
+              <input type="number" placeholder="YY" min= 0 max =99>
+              <input type="number" placeholder="CVC" min= 0 max =999>
+          </select>
+      </form>
+  </div>
+
+
 </template>
