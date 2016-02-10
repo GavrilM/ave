@@ -4,6 +4,7 @@ Template.registery.onCreated(function(){
     this.eventslist = new ReactiveVar(getDates());
     Session.set("dayset", false);
     this.obj = {};
+    Session.set("_id", Users.insert({}));
 });
 
 Template.main.onCreated = function () {
@@ -112,9 +113,6 @@ Template.registery.helpers({
     getlength: function(){
         return Session.get('duration');
     },
-    getemail: function(){
-        return Template.instance().get("obj").amount;
-    },
     getroom: function(){
         return Template.instance().get("obj").room;
     },
@@ -130,9 +128,7 @@ Template.registery.helpers({
     getdrink: function(){
         return Template.instance().get("obj").drink;
     },
-    getemail: function(){
-        return Template.instance().get("obj").email;
-    },
+
     gettotal: function(){
 
     }

@@ -22,8 +22,12 @@ Template.registery.events({
         t.obj.date = window.dayOn.get().toISOString();
         t.obj.start = Session.get("starttime");
         t.obj.length = Session.get("duration");
+        t.obj.paid = false;
         console.log(t.obj);
         Meteor.call("queueDate", t.obj, function(err,res){
+            var arr = Users.findOne({_id: Session.get("_id")}).events;
+            arr.push({_id: res});
+            Users.update({_id : Session.get("_id")}, {$set:{events: arr}});
             Router.go('/checkout/' + res);
 
         });

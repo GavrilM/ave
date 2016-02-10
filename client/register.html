@@ -1,5 +1,5 @@
 <template name="registery">
-    <div id="register">
+
 
         <div class="section-container" id="registerform">
             <div class="slider-container">
@@ -10,7 +10,7 @@
                 <div class="slider-content" data-current= 0 data-max=9>
 
                     <div class="slider-item" id="register-init">
-                        <h1>Reserve your date!</h1>
+
                         <div id="dates">
                             {{> fullcalendar options id="thecalendar" }}
                             {{ filldates }}
@@ -26,7 +26,7 @@
 
                     <div class="slider-item">
                         <form name="emailform" id="emailform">
-                        <input data-email type="text" name="email" placeholder="Email?" required/> <br>
+                        <input data-email type="text" name="email" placeholder="Email?" required /> <br>
                         </form>
                     </div>
                     <div class="slider-item">
@@ -120,5 +120,5 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </template>

@@ -78,11 +78,18 @@ h6{
   display:block;
   position:fixed;
   right:0;
+    background-image: url("/logo.jpg");
+    background-size: cover;
   z-index:2000;
-  width: auto;
-  height:auto;
+  width: 12vmin;
+  height:13vmin;
   background-color:white;
   font-size: 12vmin;
+}
+#registertoggle label{
+    height: 13vmin;
+    width: 13vmin;
+    display: block;
 }
 
 
@@ -98,7 +105,10 @@ h6{
   margin-left: 150vw;
   width: 100vw;
   overflow: hidden;
-  background-color: grey;
+  flex-wrap: wrap;
+}
+#register h1{
+    padding: 5px;
 }
 #dates{
   height: 80vh;

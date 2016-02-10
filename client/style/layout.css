@@ -5,3 +5,103 @@
 #editcost{
     display: flex;
 }
+#backtocart{
+    display: block;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+#register input[type="text"], #register input[type="number"], #register select{
+    display:block;
+    border: 3px solid grey;
+    outline:0;
+    color:black;
+    font-size: 6.5vmin;
+    min-height: 50px;
+    width:70vw;
+    border-radius: 7px;
+    transition: border 600ms ease-in-out;
+}
+#register input[type="text"]:focus, #register input[type="number"]:focus{
+    border: 3px solid orange;
+}
+#register .section-container, #register .slider-container {
+    height: 100vh;
+}
+#register .slider-item{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#register-init h3{
+    text-align:center;
+    width: 60vw;
+}
+.cock-options{
+
+    display:block;
+    width: 90vw;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+}
+#cocktail:checked ~ .cock-options{
+    opacity:1;
+}
+#register-dining input, #register-drinking input{
+    display:none;
+
+}
+.register-dining-choice, .register-drinking-choice{
+
+    width: 60vw;
+    display:flex;
+    height:28vh;
+    border: 2px solid grey;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#choice-1:checked ~ #dining-choice1,
+#choice-2:checked ~ #dining-choice2,
+#choice-3:checked ~ #dining-choice3,
+#choice-4:checked ~ #drinking-choice1,
+#choice-5:checked ~ #drinking-choice2,
+#choice-6:checked ~ #drinking-choice3
+{
+    border: 2px solid orange;
+}
+label p {
+    font-size: 1em;
+    width: 70vw;
+    line-height: 1.5em;
+}
+label span{
+    font-size: 1.5em;
+}
+#submitter button{
+    width:60vw;
+    font-size: 1.5em;
+    border: 2px solid orange;
+    background: none;
+}
+#toggle2:checked ~ #register {
+    margin-left: -00vw;
+}
+#register #partners label{
+    display: block;
+}
+
+#register #partners label, #register #cocktails label{
+
+    width: 50vw;
+    font-size: 1.5em;
+}

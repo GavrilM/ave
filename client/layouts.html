@@ -1,7 +1,8 @@
 <template name="cartlayout">
   <div id="cartlayout">
+    <button id="backtocart">To Cart</button>
     <form id="editfirst">
-      <h1>Checkout</h1>
+      <h1>Details</h1>
       <h3>For: {{#if editing}}
                       <input required type="text" value={{name}}>
                 {{else}}
@@ -79,6 +80,7 @@
               <h3>Total:</h3>
           </div>
           <div id="costmoney">
+                <br>
               <h3>${{getrentcost}}<br></h3>
               <h3>${{getfoodcost}}<br></h3>
               <h3>${{getdrinkcost}}<br></h3>
@@ -86,20 +88,89 @@
               <h3>${{getcost}}</h3>
           </div>
       </form>
-      <form id="paynow">
-          <h1>Pay Deposit Now: $500</h1>
-          {{name}}
-          <input type="text" placeholder="Card Number">
-          <select required type="text" name="room" >
-              <option value="1/">MasterCard</option>
-              <option value="2/">VISA</option>
-              <option value="3/">AmEx</option>
-              <input type="number" placeholder="MM" min = 1 max = 12>
-              <input type="number" placeholder="YY" min= 0 max =99>
-              <input type="number" placeholder="CVC" min= 0 max =999>
-          </select>
-      </form>
+
   </div>
 
 
+</template>
+
+
+
+
+
+
+
+<template name="cart">
+    <div id="body-cover"></div>
+    <div id="popin">
+        <h3>{{ thisday }}</h3>
+        <form id= "dayform"  action="">
+
+            Begin Time?
+            <input type="time" name="start" required placeholder="Begin Time?" min="6:00" max="20:00" step=900><br>
+            Number of Hours?
+            <input type="number" name="duration" max =8 min="2" >
+            <input type="submit" value="Continue >">
+        </form>
+    </div>
+
+    <div id="cart">
+        <img src="/logo.jpg" alt="Back to Home" id="backhome" style="position:absolute; height: 10vh;">
+        <h1>Hi {{name}}!</h1>
+        {{#each days}}
+            {{> dayitem}}
+        {{/each}}
+        <form id="paynow">
+            <h3>Pay Deposit</h3>
+            {{cost}}
+            <input type="text" placeholder="Card number?">
+            <select required type="text" name="room" >
+                <option value="1/">MasterCard</option>
+                <option value="2/">VISA</option>
+                <option value="3/">AmEx</option>
+
+            </select>
+            <input type="number" placeholder="MM" max = 12 min=1>
+            <input type="number" placeholder="YY" max=99>
+            <input type="number" placeholder="CVC" max=999>
+            <input type="submit">
+        </form>
+        <br><br>
+        <h1>Add Date!</h1>
+
+        <form action="" id="adderdate">
+            Date:<input type="Date" placeholder="Date?"><br>
+            Time: <input type="time"><br>
+            Duration : <input type="number" max="8" min="2"> hours <br>
+            <input type="number" min="0" max="600"> people <br>
+            In the <select required type="text" name="room" >
+            <option value="Grand Ballroom">Grand Ballroom</option>
+            <option value="Obsidian Room">The Obsidian Room</option>
+
+            <option value="Deck">The Deck</option>
+            <option value="Lounge">The Lounge</option>
+        </select>
+            <br>
+            Cocktail Hour? <input type="checkbox"> <br>
+            <input name="food" type="radio" value="1" checked>Buffet
+            <input name="food" type="radio" value="1" >Plated
+            <input name="food" type="radio" value="1" >Family Style
+            <br>
+            <input name="drink" type="radio" value="1" checked>Open Bar
+            <input name="drink" type="radio" value="1" >Limited Bar
+            <input name="drink" type="radio" value="1" >Table Service
+            <br>
+
+
+        </form>
+    </div>
+</template>
+
+<template name="dayitem">
+    <div class="dayitem">
+        <input type="checkbox" name="payfor">
+        {{getdate}} in {{getroom}}
+        <span class="info lnr lnr-question-circle" ></span>
+        <span class="remove lnr lnr-cross" ></span>
+    </div>
 </template>

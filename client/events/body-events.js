@@ -58,6 +58,7 @@ Template.main.events({
         $('#popin').removeClass("viewable");
         $('#body-cover').removeClass("covering");
     },
+
     "submit #dayform": function(e){
         var form = e.target;
         var elements = form.elements;
@@ -88,6 +89,7 @@ Template.main.events({
         for( var i = 0; i< elements.length; i++){
             elements[i].value = "";
         }
+        Users.update({_id : Session.get("_id")}, {$set:{name: Session.get("namae"), events:[]}});
     }
 
 });
